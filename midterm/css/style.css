@@ -1,0 +1,428 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS START */
+
+body {
+  font-family: 'copperhead';
+  text-align: center;
+  background-color: #f1e9da;
+}
+
+/* this creates the quote as well as its weird breathing effect on the home page*/
+h1 {
+  Font-family: 'courgette';
+  color: #f1e9da;
+  font-size: 4.9rem;
+  font-weight: bold;
+  padding: 5px;
+  line-height: 6rem;
+  animation-name: squish;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* this sets all the titles*/
+
+h2 {
+  font-family: 'Courgette';
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/*fits the header image to to mobile widths*/
+.headerimg {
+  max-width: 35%;
+  border: 4px solid #404040;
+  margin-top: 10px;
+  background-color: #f1e9da;
+}
+
+/*the following two fit the brownies to the mobile view and apply their dancing animation*/
+
+.sidedeco1 {
+  max-width: 25%;
+  margin-bottom: 50px;
+  animation-name: dancel;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.sidedeco2 {
+  max-width: 25%;
+  margin-bottom: 50px;
+  animation-name: dancer;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+header {
+  background-image: url(../images/tidi.png);
+}
+
+nav {
+  padding: 5px;
+}
+
+/*I wanted to make a drop down menu for the mobile view, however it requires java script so its just a basic nav that still works well on mobile*/
+nav a {
+  text-decoration: none;
+  font-family: 'Copperplate';
+  font-weight: bold;
+  color: #000;
+  font-size: 1.5rem;
+  background: #92a36d;
+  padding: 5px;
+  display: block;
+}
+
+nav ul,
+li {
+  border: 4px solid #404040;
+}
+
+/* adds an effect to know what you are hovering over, looks cool to faintly see the background behind it*/
+
+nav a:hover {
+  background-color: #b4c490;
+  opacity: 0.5;
+}
+
+.vice {
+  background-image: url("../images/brownieb.png");
+}
+
+p {
+  padding: 5px;
+}
+
+.container {
+  list-style-type: none;
+  border: 4px solid #404040;
+  overflow: auto;
+}
+
+.cimg {
+  max-width: 20%;
+}
+
+/*places the form in the middle of the page, wverything her is to make the form look more appealing*/
+
+form {
+  text-align: center;
+  margin: 5px;
+  list-style-type: none;
+  border: 4px solid #404040;
+}
+
+fieldset {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+input {
+  width: 14rem;
+  height: 2rem;
+  font-size: 1rem;
+  border: 2px solid #404040;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 20rem;
+  height: 25rem;
+  font-size: 1rem;
+  border: 2px solid #404040;
+  border-radius: 10px;
+}
+
+label #spam {
+  height: auto;
+  width: auto;
+}
+
+button {
+  font-family: 'copperplate';
+  font-size: 2rem;
+  font-weight: bold;
+  width: 20rem;
+  height: 50px;
+  margin: 20px 20px 20px 20px;
+  background: #92a36d;
+  border: 2px solid #404040;
+  border-radius: 10px;
+}
+
+
+footer {
+  margin-top: 0;
+  padding: 1rem;
+  border: 4px solid #404040;
+  background: #92a36d;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+/*fits the icons to the mobile width*/
+
+.icon {
+  text-align: end;
+  width: 10%;
+  margin: 0.5rem;
+}
+
+/*tablet view*/
+
+@media screen and (min-width: 35rem) {
+  /* fits the header images and animations to tablet width*/
+
+  .headerimg {
+    max-width: 20%;
+  }
+
+  #sdeco {
+    margin: 2rem;
+  }
+
+  /* makes the navigation separate to take up less space on screen*/
+
+  nav ul {
+    display: -webkit-flex;
+  }
+
+  nav ul li {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  .navigation {
+    border: 4px solid #404040;
+    margin: 0px;
+    padding: 0;
+  }
+
+  /* fits the icons to tablet view*/
+  .icon {
+    text-align: end;
+    width: 5%;
+    margin-top: 0.5rem;
+  }
+
+  .container {
+    margin: 0px;
+  }
+
+
+}
+
+/*desktop view*/
+@media screen and (min-width: 70rem) {
+
+  /*fits header images and animation to desktop screen*/
+  .headerimg {
+    max-width: 15%;
+  }
+
+  #sdeco {
+    margin: 0rem 7rem 7rem 7rem;
+    margin-bottom: 50px;
+  }
+
+  /*aligns content horizontally across screen*/
+  .container ul {
+    display: -webkit-flex;
+  }
+
+  .container ul li {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  /*moves form to the left*/
+  form {
+    text-align: left;
+  }
+
+  /*fits icon to desktop width*/
+  .icon {
+    text-align: end;
+    width: 5%;
+    margin: 0.5rem;
+  }
+
+}
+
+/*animations that make the text and brownies move*/
+
+@keyframes squish {
+  55% {
+    transform: scaley(.80);
+  }
+}
+
+@keyframes dancel {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes dancer {
+
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+
+}
