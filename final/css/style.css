@@ -1,0 +1,419 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*css start*/
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  text-align: center;
+  background-image: url(../images/portfoliobg.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Rouge Script', cursive;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: 'Rouge Script', cursive;
+  font-size: 3rem;
+  padding: 10px;
+  border-bottom: 3px dashed #000;
+}
+
+/* navigation start*/
+
+nav {
+  background: #000;
+  padding: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-family: 'roboto', sans-serif;
+  ;
+}
+
+li a:hover {
+  border-bottom: 2px solid #74D5D9;
+  font-size: large;
+}
+
+.current {
+  border-bottom: 2px solid #74D5D9;
+  padding: 1px;
+  font-size: larger;
+}
+
+.nothome {
+  padding-top: 10px;
+}
+
+.nothome li {
+  padding: 5px;
+}
+
+/* end of navigation*/
+
+.content {
+  flex: 1 0 auto;
+  /* keeps the footer in place */
+}
+
+.deer {
+  padding: 10px;
+  max-width: 150px;
+}
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quote {
+  padding: 10px;
+}
+
+.me {
+  max-width: 100px;
+  border: 2px solid #000;
+  border-radius: 100px;
+  margin: 10px;
+}
+
+p {
+  font-family: 'roboto', sans-serif;
+  margin: 20px;
+}
+
+.phimage {
+  max-width: 300px;
+  border: 3px solid #000;
+  margin: 10px
+    /* fits olive to the page*/
+}
+
+.flex-container {
+  margin-bottom: 20px;
+}
+
+/*form style start*/
+
+form {
+  text-align: center;
+  margin: 5px;
+  list-style-type: none;
+}
+
+fieldset {
+  font-size: 1rem;
+  margin: 20px;
+}
+
+input {
+  width: 10rem;
+  height: 1rem;
+  font-size: 1rem;
+  border: 2px solid #000;
+}
+
+textarea {
+  width: 13rem;
+  height: 10rem;
+  font-size: 1rem;
+  border: 2px solid #000;
+}
+
+button {
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10rem;
+  height: 2rem;
+  margin: 5px;
+  background: #92a36d;
+  border: 2px solid #000;
+}
+
+/* form style end*/
+
+footer {
+  padding: 30px;
+  color: white;
+  background-color: #000;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/*tablet*/
+@media screen and (min-width: 35rem) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  /*navigation style start*/
+  nav {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    overflow: hidden;
+  }
+
+  li {
+    float: right;
+    /* sticks the nav to the right of the page, for some reason it reverses there order. I think if I use flex I can fix the problem*/
+  }
+
+  .home {
+    float: left;
+    /*moves my name/home above the logo*/
+  }
+
+  .home li {
+    padding-top: 5px;
+  }
+
+  .nothome li {
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  /*nav style end*/
+
+  .deer {
+    position: fixed;
+    top: 160px;
+    left: 4px;
+    max-width: 200px;
+    /* this fixes the deer to the page, so if the page is large enough to scroll it will always be on the left*/
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 250px;
+    /*fixes the opaque box around the deer. z-index insures that the box is behind the other elements and not overlapping my name/home*/
+  }
+
+  .quote {
+    font-size: 10%;
+    position: fixed;
+    left: 260px;
+    /* it probably would've been easier to place everything with grid or flex but im in too deep*/
+  }
+
+  .me {
+    max-width: 150px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25%;
+  }
+
+  /* form start*/
+  form {
+    float: right;
+    margin-right: 11%;
+  }
+
+  fieldset {
+    font-size: 1.5rem;
+  }
+
+  input {
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  textarea {
+    width: 14rem;
+    font-size: 1rem;
+  }
+
+  /*desktop*/
+  @media screen and (min-width: 60rem) {
+
+    .nothome a {
+      margin-left: 100px;
+    }
+
+    .sidebar {
+      width: 280px;
+    }
+
+    .deer {
+      left: 0;
+      top: 150px;
+      max-width: 250px;
+    }
+
+    h1 {
+      font-size: 7rem;
+    }
+
+    .quote {
+      padding: 10px;
+      left: 280px;
+    }
+
+    p {
+      margin: 0;
+      /* the columns are uneven if I  don't get rid of the margin*/
+    }
+
+    .column {
+      columns: 2;
+    }
+
+    /* form start*/
+    form {
+      float: none;
+      /* frees it from the right side */
+    }
+  }
